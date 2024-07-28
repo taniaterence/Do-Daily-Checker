@@ -95,8 +95,6 @@ input, select, textarea{
 }
 
 .check-mark{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
+    margin: auto;
+    width: 20%;
 }
