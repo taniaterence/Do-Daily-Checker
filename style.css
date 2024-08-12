@@ -12,6 +12,16 @@ input, select, textarea{
 
 }
 
+#month{
+    grid-column: 1/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    background-color: #e5def6;
+    border-radius: 20px; 
+}
+
 .tasks-container{
     background-color:  #b5a2d0;
     height: 40.1em;
@@ -70,16 +80,6 @@ input, select, textarea{
     box-shadow: 12px 12px 8px #75659d;
 }
 
-.month{
-    grid-column: 1/8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4em;
-    background-color: #e5def6;
-    border-radius: 20px; 
-}
-
 .day {
     display: flex;
     align-items: center;
@@ -89,7 +89,7 @@ input, select, textarea{
     font-size: 16.5px;  
 }
 
-.grid-item {
+.date-box {
     background-color: #e5def6; /*#dbd1f0*/
     border-radius: 20px;  
 }
@@ -97,4 +97,5 @@ input, select, textarea{
 .check-mark{
     margin: auto;
     width: 20%;
+    visibility: hidden;
 }
