@@ -1,4 +1,5 @@
 let dateBox = document.getElementsByClassName("date-box");
+let dates = document.getElementsByClassName("date");
 let months = [
   "January",
   "February",
@@ -27,15 +28,15 @@ monthEl.innerHTML = months[currentDate.getMonth()];
 //Determining which day the first day of the month falls on
 let firstDate = new Date((months[currentDate.getMonth()]) + " 1, " + currentYear);
 let firstDay = days[firstDate.getDay()]; 
-console.log(firstDay);
+//console.log(firstDay);
 
 //Determining the number of days in a month
 daysInMonth = new Date(currentYear, currentDate.getMonth(), 0).getDate();
-console.log(daysInMonth);
+//console.log(daysInMonth);
 
 let numStart = firstDate.getDay();
 for (let x = 1; x <= daysInMonth; x++) {
-  dateBox[numStart].textContent = x;
+  dates[numStart].textContent = x;
   numStart++;
 }
 
@@ -44,10 +45,10 @@ for (let x = 1; x <= daysInMonth; x++) {
 //Function to toggle appearance of check mark within the date boxes
 function toggleHideShow(event) {
   console.log(event);
-  console.log(event.target.childNodes[1]);
+  console.log(event.target.childNodes[3]);
   if (event.target.classList.contains("date-box")) {
-    event.target.childNodes[1].style.visibility =
-      event.target.childNodes[1].style.visibility === "visible"
+    event.target.childNodes[3].style.visibility =
+      event.target.childNodes[3].style.visibility === "visible"
         ? "hidden"
         : "visible";
   } else {
