@@ -47,11 +47,16 @@ function toggleHideShow(event) {
   console.log(event);
   console.log(event.target.childNodes[3]);
   if (event.target.classList.contains("date-box")) {
-    event.target.childNodes[3].style.visibility =
-      event.target.childNodes[3].style.visibility === "visible"
+    for (let child of event.target.childNodes) {
+      console.log(child.classList);
+      if (child.classList.contains("check-mark")) {
+        child.style.visibility =
+      child.style.visibility === "visible"
         ? "hidden"
         : "visible";
-  } else {
+      }
+    }
+  } else if(event.target.classList.contains("check-mark")){
     event.target.style.visibility =
       event.target.style.visibility === "visible" ? "hidden" : "visible";
   }
